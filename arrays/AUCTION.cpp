@@ -6,9 +6,10 @@ int main()
     cin>>t;
     while(t--)
     {
-        int k,x;
-        cin>>k>>x;
-        cout<<k*7-x<<endl;
+        int a,b,c;
+        cin>>a>>b>c;
+if(a>b && a>c)
+cout<<
     }
     return 0;
 }
