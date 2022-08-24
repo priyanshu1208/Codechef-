@@ -13,7 +13,7 @@ int main()
         {
             cin >> a[i];
         }
-        int H[100] = {0};
+        unordered_map<int, int> H;
         for (int i = 0; i < n; i++)
         {
             H[a[i]]++;
@@ -24,12 +24,11 @@ int main()
             {
                 frequency = H[a[j]];
             }
-           
         }
-         if (((n + 1) / 2) < frequency)
-                cout << "No" << endl;
-            else
-                cout << "Yes" << endl;
+        if (((n + 1) / 2) < frequency)
+            cout << "No" << endl;
+        else
+            cout << "Yes" << endl;
     }
     return 0;
 }
