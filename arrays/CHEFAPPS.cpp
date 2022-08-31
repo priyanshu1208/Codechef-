@@ -8,11 +8,15 @@ int main()
     {
         int s, x, y, z;
         cin >> s >> x >> y >> z;
-        int p = (x + y + z) - s;
-        if (p < 0)
+        int free = s - (x + y);
+        int a = z - free;
+        if (a <= 0)
             cout << 0 << endl;
+        else if (a <= max(x, y))
+            cout
+                << 1 << endl;
         else
-            cout << (x + y + z) / s << endl;
+            cout << 2 << endl;
     }
     return 0;
 }
