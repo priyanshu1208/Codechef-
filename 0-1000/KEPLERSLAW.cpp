@@ -8,9 +8,7 @@ int main()
     {
         int a, b, c, d;
         cin >> a >> b >> c >> d;
-        int left = (a * a) / (c * c * c);
-        int right = (b * b) / (d * d * d);
-        if (left == right)
+        if (pow(b, 2) / pow(d, 3) == pow(a, 2) / pow(c, 3))
             cout << "Yes" << endl;
         else
             cout << "No" << endl;
