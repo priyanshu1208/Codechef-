@@ -1,26 +1,31 @@
-#include<bits/stdc++.h>
+#include <iostream>
+#include <string>
 using namespace std;
+
 int main()
 {
-// int t;
-// cin>>t;
-// while(t--)
-// {
-    int n;
-    cin>>n;
-    int a[100];
-    int r;
-    for(int i=0;i<3;i++)
+    int t, d;
+    string s;
+    cin >> t;
+    while (t--)
     {
-        r=n%10;
-        n=n/10;
-        a[i]=r;
+        cin >> d;
+        cin >> s;
+        int count = 0;
+        for (int i = 0; i < d; i++)
+        {
+            if (s[i] == '5' || s[i] == '0')
+            {
+                cout << "YES" << endl;
+                break;
+            }
+            else
+                count++;
+        }
+        if (count == d)
+        {
+            cout << "NO" << endl;
+        }
     }
-    for (int i = 0; i < 3; i++)
-    {
-        cout<<a[i];
-    }
-    
-// }
     return 0;
 }
