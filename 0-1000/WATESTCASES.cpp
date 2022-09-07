@@ -6,21 +6,19 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n, k;
-        cin >> n>> k;
-        int a[100001];
+        int n;
+        cin >> n;
+        int a[1000];
         for (int i = 0; i < n; i++)
-        {
             cin >> a[i];
-        }
-        int count = 0;
+        string v;
+        cin >> v;
         for (int i = 0; i < n; i++)
         {
-            if (a[i] > k)
-                count++;
-                
+            if (v[i] == '1')
+                a[i] = 101;
         }
-        cout << count << endl;
+        cout << *min_element(a, a + n) << endl;
     }
     return 0;
 }
