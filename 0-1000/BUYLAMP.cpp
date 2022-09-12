@@ -6,24 +6,18 @@ int main()
     cin >> t;
     while (t--)
     {
-        int n;
-        cin >> n;
-        long long a[1000];
-        for (int i = 0; i < n; i++)
-            cin >> a[i];
-
-        int count = 0;
-
-        for (int i = 0; i < n; i++)
+        int n, k, x, y;
+        cin >> n >> k >> x >> y;
+        int sum = k * x;
+        if (n - k > 0)
         {
-            for (int j = i + 1; i < n; j++)
-            {
 
-                if ((__gcd(a[i], a[j])) == ((a[i] * a[j]) / __gcd(a[i], a[j])))
-                    count++;
-            }
+            if ((n - k) * x > (n - k) * y)
+                sum += (n - k) * y;
+            else
+                sum += (n - k) * x;
         }
-        cout << count << endl;
+        cout << sum << endl;
     }
     return 0;
 }
